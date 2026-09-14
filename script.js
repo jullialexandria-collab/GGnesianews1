@@ -78,3 +78,18 @@ dropdowns.forEach(function(dropdown) {
     });
 
 });
+/* ========================================
+   SEARCH
+======================================== */
+
+const searchBtn = document.getElementById("searchBtn");
+const searchPanel = document.getElementById("searchPanel");
+const searchInput = document.getElementById("searchInput");
+
+searchBtn.addEventListener("click", function () {
+    searchPanel.classList.toggle("active");
+
+    if (searchPanel.classList.contains("active")) {
+        searchInput.focus();
+    }
+});
