@@ -1,7 +1,6 @@
 /* ========================================
    GGNESIA NEWS
    SCRIPT.JS
-   TAHAP 3A — SIDE MENU
 ======================================== */
 
 const menuBtn = document.getElementById("menuBtn");
@@ -11,7 +10,7 @@ const overlay = document.getElementById("overlay");
 
 
 /* =========================
-   BUKA MENU
+   SIDE MENU
 ========================= */
 
 function openMenu() {
@@ -20,11 +19,6 @@ function openMenu() {
     document.body.classList.add("menu-open");
 }
 
-
-/* =========================
-   TUTUP MENU
-========================= */
-
 function closeMenu() {
     sideMenu.classList.remove("active");
     overlay.classList.remove("active");
@@ -32,18 +26,14 @@ function closeMenu() {
 }
 
 
-/* =========================
-   TOMBOL MENU
-========================= */
-
 menuBtn.addEventListener("click", openMenu);
-
 closeBtn.addEventListener("click", closeMenu);
-
 overlay.addEventListener("click", closeMenu);
-/* ========================================
-   DROPDOWN MENU
-======================================== */
+
+
+/* =========================
+   DROPDOWN
+========================= */
 
 const dropdowns = document.querySelectorAll(".dropdown");
 
@@ -78,18 +68,22 @@ dropdowns.forEach(function(dropdown) {
     });
 
 });
-/* ========================================
+
+
+/* =========================
    SEARCH
-======================================== */
+========================= */
 
 const searchBtn = document.getElementById("searchBtn");
 const searchPanel = document.getElementById("searchPanel");
 const searchInput = document.getElementById("searchInput");
 
-searchBtn.addEventListener("click", function () {
+searchBtn.addEventListener("click", function() {
+
     searchPanel.classList.toggle("active");
 
     if (searchPanel.classList.contains("active")) {
         searchInput.focus();
     }
+
 });
