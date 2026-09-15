@@ -3,21 +3,21 @@
 ========================= */
 
 .popular-item {
-    min-height: 110px;
-    margin-bottom: 12px;
-    padding: 12px;
+    grid-template-columns: 35px 1fr 95px;
+    gap: 10px;
 
-    display: grid;
-    grid-template-columns: 45px 1fr 125px;
-    gap: 15px;
-    align-items: center;
-
-    border: 1px solid #1b3857;
-    border-radius: 10px;
-
-    background: #0c1d32;
+    min-height: 90px;
+    padding: 9px;
 }
 
+.popular-image {
+    width: 95px;
+    height: 70px;
+}
+
+.popular-content h2 {
+    font-size: 14px;
+}
 /* NOMOR DI KIRI */
 
 .popular-number {
