@@ -116,3 +116,42 @@ async function loadArticles() {
 }
 
 loadArticles();
+/* =========================
+   HIGHLIGHT
+========================= */
+
+function displayFeatured() {
+
+    const featuredArticles = articles.filter(
+        article => article.featured === true
+    );
+
+    if (featuredArticles.length === 0) {
+        return;
+    }
+
+    const article = featuredArticles[0];
+
+    const heroImage = document.querySelector(".hero-card img");
+    const heroCategory = document.querySelector(".hero-content .category");
+    const heroTitle = document.querySelector(".hero-content h1");
+    const heroMeta = document.querySelector(".hero-content p");
+
+    if (heroImage) {
+        heroImage.src = article.image;
+        heroImage.alt = article.title;
+    }
+
+    if (heroCategory) {
+        heroCategory.textContent = article.category;
+    }
+
+    if (heroTitle) {
+        heroTitle.textContent = article.title;
+    }
+
+    if (heroMeta) {
+        heroMeta.textContent =
+            `${article.author} • ${article.date}`;
+    }
+}
