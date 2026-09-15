@@ -3,196 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>GGNesia News</title>
+    <meta name="description" content="Portal berita game dan esports Indonesia">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="site-header">
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="header">
+
         <div class="header-inner">
 
-            <button class="menu-button" id="menuButton">
-                ☰
+            <button class="menu-btn" id="menuBtn" aria-label="Buka menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
-            <div class="site-name">
-                GGNESIA NEWS
-            </div>
+            <a href="#" class="brand">
+                GGNESIA <span>NEWS</span>
+            </a>
 
-            <button class="search-button">
-                🔍
+            <button class="search-btn" id="searchBtn" aria-label="Cari">
+                <span></span>
             </button>
 
         </div>
+
     </header>
 
 
-    <!-- MENU SAMPING -->
+    <!-- =========================
+         SIDE MENU
+    ========================== -->
+    <div class="overlay" id="overlay"></div>
+
     <aside class="side-menu" id="sideMenu">
 
-        <button class="close-menu" id="closeMenu">
-            ✕
-        </button>
+        <div class="side-header">
 
-        <div class="menu-title">
-            GGNESIA NEWS
+            <div class="side-brand">
+                GGNESIA <span>NEWS</span>
+            </div>
+
+            <button class="close-btn" id="closeBtn">
+                ×
+            </button>
+
         </div>
 
-        <nav>
-            <a href="#">HOME</a>
-            <a href="#">NEWS</a>
 
-            <div class="menu-section">
-                <div class="menu-heading">
-                    ESPORTS
-                    <span>⌄</span>
+        <nav class="navigation">
+
+            <a href="#" class="main-link">
+                HOME
+            </a>
+
+            <a href="#latest" class="main-link">
+                NEWS
+            </a>
+
+
+            <!-- ESPORTS -->
+            <div class="menu-group">
+
+                <button class="menu-heading">
+                    <span>ESPORTS</span>
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#">Mobile Legends</a>
+                    <a href="#">PUBG Mobile</a>
+                    <a href="#">Free Fire</a>
+                    <a href="#">Honor of Kings</a>
+                    <a href="#">eFootball</a>
+                    <a href="#">Dota 2</a>
+                    <a href="#">Valorant</a>
+                    <a href="#">Other</a>
+
                 </div>
 
-                <a href="#">Mobile Legends</a>
-                <a href="#">PUBG Mobile</a>
-                <a href="#">Free Fire</a>
-                <a href="#">Honor of Kings</a>
-                <a href="#">eFootball</a>
-                <a href="#">Dota 2</a>
-                <a href="#">Valorant</a>
             </div>
 
-            <div class="menu-section">
-                <div class="menu-heading">
-                    LIFESTYLE
-                    <span>⌄</span>
+
+            <!-- LIFESTYLE -->
+            <div class="menu-group">
+
+                <button class="menu-heading">
+                    <span>LIFESTYLE</span>
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#">Tech</a>
+                    <a href="#">Gadget</a>
+                    <a href="#">Entertainment</a>
+                    <a href="#">Hangout</a>
+                    <a href="#">Other</a>
+
                 </div>
 
-                <a href="#">Tech</a>
-                <a href="#">Gadget</a>
-                <a href="#">Entertainment</a>
             </div>
 
-            <div class="menu-section">
-                <div class="menu-heading">
-                    OTHER
-                    <span>⌄</span>
+
+            <!-- OTHER -->
+            <div class="menu-group">
+
+                <button class="menu-heading">
+                    <span>OTHER</span>
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div class="submenu">
+
+                    <a href="#">Tips & Trick</a>
+                    <a href="#">Guide</a>
+                    <a href="#">Review</a>
+                    <a href="#">Industry</a>
+
                 </div>
 
-                <a href="#">Tips & Trick</a>
-                <a href="#">Guide</a>
-                <a href="#">Review</a>
-                <a href="#">Industry</a>
             </div>
+
         </nav>
+
+
+        <div class="side-footer">
+
+            <div class="socials">
+
+                <a href="#">IG</a>
+                <a href="#">FB</a>
+                <a href="#">X</a>
+                <a href="#">YT</a>
+                <a href="#">TT</a>
+
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Tentang Kami</a>
+                <a href="#">Redaksi</a>
+                <a href="#">Kode Etik</a>
+            </div>
+
+            <p>
+                © 2026 GGNesia News
+            </p>
+
+        </div>
 
     </aside>
 
-    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- =========================
+         SEARCH
+    ========================== -->
+    <div class="search-panel" id="searchPanel">
+
+        <div class="search-box">
+
+            <button class="search-close" id="searchClose">
+                ×
+            </button>
+
+            <h2>Cari Berita</h2>
+
+            <div class="search-input">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Ketik untuk mencari berita..."
+                >
+
+                <button id="searchSubmit">
+                    🔍
+                </button>
+
+            </div>
+
+            <div id="searchResult"></div>
+
+        </div>
+
+    </div>
 
 
-    <!-- KONTEN UTAMA -->
+    <!-- =========================
+         MAIN
+    ========================== -->
     <main>
 
-        <!-- HERO -->
-        <section class="hero-section">
 
-            <div class="section-label">
+        <!-- =========================
+             HIGHLIGHT
+        ========================== -->
+        <section class="highlight">
+
+            <div class="section-heading">
                 BERITA TERKINI
             </div>
+
 
             <div class="hero-card">
 
                 <div class="hero-image">
-                    Gambar Berita Utama
+                    GAMBAR BERITA
                 </div>
 
-                <div class="hero-content">
+                <div class="hero-info">
 
-                    <div class="category">
+                    <span class="category">
                         MOBILE LEGENDS
-                    </div>
+                    </span>
 
                     <h1>
-                        Judul berita utama GGNesia News
+                        GGNesia News: Berita Game dan Esports Terbaru Hari Ini
                     </h1>
 
                     <p>
-                        Ringkasan singkat berita terbaru seputar dunia game dan esports.
+                        Ikuti kabar terbaru seputar game, esports,
+                        turnamen, pemain, dan industri gaming.
                     </p>
 
-                    <span class="article-meta">
-                        GGNesia News • 15 September 2026
-                    </span>
+                    <div class="meta">
+                        GGNesia News · 15 September 2026
+                    </div>
 
                 </div>
+
+            </div>
+
+
+            <div class="slider-dots">
+
+                <button class="dot active"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
 
             </div>
 
         </section>
 
 
-        <!-- TERPOPULER -->
-        <section class="popular-section">
+        <!-- =========================
+             TERPOPULER
+        ========================== -->
+        <section class="popular">
 
             <div class="section-title">
                 <span>🔥</span>
                 TERPOPULER
             </div>
 
-            <article class="popular-item">
-                <div class="popular-number">01</div>
 
-                <div class="popular-image">
-                    Gambar
+            <article class="popular-item">
+
+                <div class="popular-number">
+                    01
                 </div>
 
                 <div class="popular-content">
-                    <div class="category">ESPORTS</div>
-                    <h2>Judul berita populer pertama</h2>
-                    <span>2 jam lalu</span>
+
+                    <span class="category">
+                        ESPORTS
+                    </span>
+
+                    <h2>
+                        Berita esports paling populer hari ini
+                    </h2>
+
+                    <div class="meta">
+                        2 jam lalu
+                    </div>
+
                 </div>
+
+                <div class="popular-image">
+                    GAMBAR
+                </div>
+
             </article>
 
 
             <article class="popular-item">
-                <div class="popular-number">02</div>
 
-                <div class="popular-image">
-                    Gambar
+                <div class="popular-number">
+                    02
                 </div>
 
                 <div class="popular-content">
-                    <div class="category">GAME</div>
-                    <h2>Judul berita populer kedua</h2>
-                    <span>4 jam lalu</span>
+
+                    <span class="category">
+                        GAME
+                    </span>
+
+                    <h2>
+                        Update game terbaru yang sedang ramai dibicarakan
+                    </h2>
+
+                    <div class="meta">
+                        4 jam lalu
+                    </div>
+
                 </div>
+
+                <div class="popular-image">
+                    GAMBAR
+                </div>
+
             </article>
 
 
             <article class="popular-item">
-                <div class="popular-number">03</div>
 
-                <div class="popular-image">
-                    Gambar
+                <div class="popular-number">
+                    03
                 </div>
 
                 <div class="popular-content">
-                    <div class="category">MOBILE</div>
-                    <h2>Judul berita populer ketiga</h2>
-                    <span>6 jam lalu</span>
+
+                    <span class="category">
+                        MOBILE
+                    </span>
+
+                    <h2>
+                        Kabar terbaru dunia game mobile Indonesia
+                    </h2>
+
+                    <div class="meta">
+                        6 jam lalu
+                    </div>
+
                 </div>
+
+                <div class="popular-image">
+                    GAMBAR
+                </div>
+
             </article>
 
         </section>
 
 
-        <!-- KATEGORI GAME -->
-        <section class="game-section">
+        <!-- =========================
+             GAME
+        ========================== -->
+        <section class="games">
 
             <div class="section-title">
                 🎮 BERITA GAME
             </div>
 
-            <div class="game-categories">
+            <div class="game-list">
 
                 <a href="#">Mobile Legends</a>
                 <a href="#">PUBG Mobile</a>
@@ -207,69 +380,115 @@
         </section>
 
 
-        <!-- BERITA TERBARU -->
-        <section class="latest-section">
+        <!-- =========================
+             BERITA TERBARU
+        ========================== -->
+        <section class="latest" id="latest">
 
             <div class="section-title">
                 📰 BERITA TERBARU
             </div>
 
+
             <div class="news-grid">
 
                 <article class="news-card">
+
                     <div class="news-image">
-                        Gambar
+                        GAMBAR
                     </div>
 
-                    <div class="category">
-                        MOBILE LEGENDS
+                    <div class="news-info">
+
+                        <span class="category">
+                            MOBILE LEGENDS
+                        </span>
+
+                        <h2>
+                            Berita Mobile Legends terbaru hari ini
+                        </h2>
+
+                        <div class="meta">
+                            1 jam lalu
+                        </div>
+
                     </div>
 
-                    <h2>
-                        Judul berita terbaru pertama
-                    </h2>
-
-                    <span>
-                        1 jam lalu
-                    </span>
                 </article>
 
 
                 <article class="news-card">
+
                     <div class="news-image">
-                        Gambar
+                        GAMBAR
                     </div>
 
-                    <div class="category">
-                        PUBG MOBILE
+                    <div class="news-info">
+
+                        <span class="category">
+                            PUBG MOBILE
+                        </span>
+
+                        <h2>
+                            Update terbaru PUBG Mobile
+                        </h2>
+
+                        <div class="meta">
+                            3 jam lalu
+                        </div>
+
                     </div>
 
-                    <h2>
-                        Judul berita terbaru kedua
-                    </h2>
-
-                    <span>
-                        3 jam lalu
-                    </span>
                 </article>
 
 
                 <article class="news-card">
+
                     <div class="news-image">
-                        Gambar
+                        GAMBAR
                     </div>
 
-                    <div class="category">
-                        FREE FIRE
+                    <div class="news-info">
+
+                        <span class="category">
+                            FREE FIRE
+                        </span>
+
+                        <h2>
+                            Kabar terbaru Free Fire Indonesia
+                        </h2>
+
+                        <div class="meta">
+                            5 jam lalu
+                        </div>
+
                     </div>
 
-                    <h2>
-                        Judul berita terbaru ketiga
-                    </h2>
+                </article>
 
-                    <span>
-                        5 jam lalu
-                    </span>
+
+                <article class="news-card">
+
+                    <div class="news-image">
+                        GAMBAR
+                    </div>
+
+                    <div class="news-info">
+
+                        <span class="category">
+                            VALORANT
+                        </span>
+
+                        <h2>
+                            Kompetisi Valorant terbaru
+                        </h2>
+
+                        <div class="meta">
+                            7 jam lalu
+                        </div>
+
+                    </div>
+
                 </article>
 
             </div>
@@ -279,10 +498,12 @@
     </main>
 
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
 
-        <div class="footer-name">
+        <div class="footer-brand">
             GGNESIA NEWS
         </div>
 
@@ -290,8 +511,11 @@
             Portal Berita Game & Esports Indonesia
         </p>
 
-        <div class="footer-links">
-            Tentang Kami • Redaksi • Kontak • Kode Etik
+        <div class="footer-menu">
+            <a href="#">Tentang Kami</a>
+            <a href="#">Redaksi</a>
+            <a href="#">Kontak</a>
+            <a href="#">Kode Etik</a>
         </div>
 
         <small>
