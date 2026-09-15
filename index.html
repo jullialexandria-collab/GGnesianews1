@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GGNesia News — Portal Berita Gaming</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+
+        <div class="header-left">
+            <button class="menu-btn" id="menuBtn" aria-label="Buka menu">
+                ☰
+            </button>
+
+            <a href="#" class="logo">
+                <span>GG</span>Nesia
+                <small>NEWS</small>
+            </a>
+        </div>
+
+        <nav class="desktop-nav">
+            <a href="#" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#esports">Esports</a>
+            <a href="#games">Game</a>
+            <a href="#review">Review</a>
+            <a href="#guide">Guide</a>
+        </nav>
+
+        <button class="search-btn" id="searchBtn" aria-label="Cari berita">
+            🔍
+        </button>
+
+    </header>
+
+
+    <!-- ================= MOBILE SIDEBAR ================= -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="mobile-sidebar" id="mobileSidebar">
+
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <span>GG</span>Nesia
+                <small>NEWS</small>
+            </div>
+
+            <button id="closeMenu" class="close-btn">
+                ✕
+            </button>
+        </div>
+
+        <nav class="mobile-nav">
+
+            <a href="#" class="mobile-link">
+                Home
+            </a>
+
+            <a href="#news" class="mobile-link">
+                News
+            </a>
+
+            <button class="category-toggle">
+                Esports
+                <span>+</span>
+            </button>
+
+            <div class="category-menu">
+                <a href="#">Mobile Legends</a>
+                <a href="#">PUBG Mobile</a>
+                <a href="#">Free Fire</a>
+                <a href="#">Valorant</a>
+                <a href="#">Honor of Kings</a>
+                <a href="#">Dota 2</a>
+                <a href="#">League of Legends</a>
+            </div>
+
+
+            <button class="category-toggle">
+                Game
+                <span>+</span>
+            </button>
+
+            <div class="category-menu">
+                <a href="#">Game Terbaru</a>
+                <a href="#">Update Game</a>
+                <a href="#">Event</a>
+                <a href="#">Game PC</a>
+                <a href="#">Game Console</a>
+                <a href="#">Game Mobile</a>
+            </div>
+
+
+            <button class="category-toggle">
+                Review
+                <span>+</span>
+            </button>
+
+            <div class="category-menu">
+                <a href="#">Review Game</a>
+                <a href="#">Hardware Gaming</a>
+                <a href="#">Performa Game</a>
+            </div>
+
+
+            <button class="category-toggle">
+                Guide
+                <span>+</span>
+            </button>
+
+            <div class="category-menu">
+                <a href="#">Tips & Trik</a>
+                <a href="#">Guide</a>
+                <a href="#">Build</a>
+                <a href="#">Kode Redeem</a>
+            </div>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= SEARCH ================= -->
+    <div class="search-panel" id="searchPanel">
+
+        <div class="search-box">
+
+            <button id="closeSearch" class="close-search">
+                ✕
+            </button>
+
+            <h2>Cari Berita Gaming</h2>
+
+            <form id="searchForm">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Cari game, esports, berita..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Cari
+                </button>
+
+            </form>
+
+            <div id="searchResults"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">GGNESIA NEWS</span>
+                    <h1>Highlight Gaming</h1>
+                </div>
+            </div>
+
+
+            <div class="hero-slider" id="heroSlider">
+
+                <!-- SLIDE 1 -->
+                <article class="hero-slide active">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1400&q=80"
+                        alt="Gaming"
+                    >
+
+                    <div class="hero-content">
+
+                        <span class="category-badge">
+                            ESPORTS
+                        </span>
+
+                        <h2>
+                            Perkembangan Esports dan Dunia Gaming Indonesia
+                        </h2>
+
+                        <p>
+                            Berita terbaru seputar pertandingan,
+                            tim, pemain, dan perkembangan industri game.
+                        </p>
+
+                        <div class="article-meta">
+                            GGNesia News · Hari ini
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SLIDE 2 -->
+                <article class="hero-slide">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80"
+                        alt="Video Game"
+                    >
+
+                    <div class="hero-content">
+
+                        <span class="category-badge">
+                            GAME
+                        </span>
+
+                        <h2>
+                            Game Terbaru yang Sedang Jadi Perbincangan Gamer
+                        </h2>
+
+                        <p>
+                            Simak informasi dan kabar terbaru dari industri game.
+                        </p>
+
+                        <div class="article-meta">
+                            GGNesia News · Hari ini
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SLIDE 3 -->
+                <article class="hero-slide">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=1400&q=80"
+                        alt="Esports Tournament"
+                    >
+
+                    <div class="hero-content">
+
+                        <span class="category-badge">
+                            TOURNAMENT
+                        </span>
+
+                        <h2>
+                            Turnamen Gaming dan Esports yang Wajib Kamu Ikuti
+                        </h2>
+
+                        <p>
+                            Jadwal, hasil pertandingan, hingga berita tim favoritmu.
+                        </p>
+
+                        <div class="article-meta">
+                            GGNesia News · Hari ini
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SLIDE 4 -->
+                <article class="hero-slide">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1400&q=80"
+                        alt="Gaming Setup"
+                    >
+
+                    <div class="hero-content">
+
+                        <span class="category-badge">
+                            GAMING
+                        </span>
+
+                        <h2>
+                            Tren Gaming yang Mengubah Cara Gamer Bermain
+                        </h2>
+
+                        <p>
+                            Teknologi dan perkembangan baru di dunia gaming.
+                        </p>
+
+                        <div class="article-meta">
+                            GGNesia News · Hari ini
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- SLIDER DOTS -->
+            <div class="slider-dots" id="sliderDots">
+
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
+                <button class="dot" data-slide="3"></button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTENT ================= -->
+        <section class="content-section" id="news">
+
+            <div class="latest-news">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">UPDATE TERBARU</span>
+                        <h2>Berita Terbaru</h2>
+                    </div>
+
+                    <a href="#" class="see-all">
+                        Lihat Semua →
+                    </a>
+
+                </div>
+
+
+                <div class="news-list">
+
+                    <article class="news-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=700&q=80"
+                            alt="Mobile Gaming"
+                        >
+
+                        <div class="news-info">
+
+                            <span class="category-badge">
+                                MOBILE
+                            </span>
+
+                            <h3>
+                                Update Game Mobile Terbaru Hadir dengan Banyak Fitur Baru
+                            </h3>
+
+                            <p>
+                                Informasi terbaru dari dunia game mobile.
+                            </p>
+
+                            <span class="article-meta">
+                                2 jam lalu
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="news-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=700&q=80"
+                            alt="PC Gaming"
+                        >
+
+                        <div class="news-info">
+
+                            <span class="category-badge">
+                                PC
+                            </span>
+
+                            <h3>
+                                Game PC Baru Mulai Menarik Perhatian Para Gamer
+                            </h3>
+
+                            <p>
+                                Simak kabar terbaru dari industri game PC.
+                            </p>
+
+                            <span class="article-meta">
+                                4 jam lalu
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="news-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=700&q=80"
+                            alt="Esports"
+                        >
+
+                        <div class="news-info">
+
+                            <span class="category-badge">
+                                ESPORTS
+                            </span>
+
+                            <h3>
+                                Tim Esports Indonesia Bersiap Menghadapi Kompetisi Besar
+                            </h3>
+
+                            <p>
+                                Berita terbaru dari skena esports Indonesia.
+                            </p>
+
+                            <span class="article-meta">
+                                6 jam lalu
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= POPULAR ================= -->
+            <aside class="popular-news">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            PALING DIBACA
+                        </span>
+
+                        <h2>
+                            Terpopuler
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="popular-list">
+
+                    <article class="popular-item">
+
+                        <strong>01</strong>
+
+                        <div>
+                            <span>ESPORTS</span>
+                            <h3>
+                                Berita Esports Terbaru Hari Ini
+                            </h3>
+                        </div>
+
+                    </article>
+
+
+                    <article class="popular-item">
+
+                        <strong>02</strong>
+
+                        <div>
+                            <span>GAME</span>
+                            <h3>
+                                Game Baru yang Paling Ditunggu Gamer
+                            </h3>
+                        </div>
+
+                    </article>
+
+
+                    <article class="popular-item">
+
+                        <strong>03</strong>
+
+                        <div>
+                            <span>MOBILE</span>
+                            <h3>
+                                Update Besar Game Mobile Populer
+                            </h3>
+                        </div>
+
+                    </article>
+
+
+                    <article class="popular-item">
+
+                        <strong>04</strong>
+
+                        <div>
+                            <span>ESPORTS</span>
+                            <h3>
+                                Hasil Pertandingan Turnamen Terbaru
+                            </h3>
+                        </div>
+
+                    </article>
+
+
+                    <article class="popular-item">
+
+                        <strong>05</strong>
+
+                        <div>
+                            <span>GAMING</span>
+                            <h3>
+                                Perkembangan Industri Gaming Dunia
+                            </h3>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- ================= GAME CATEGORIES ================= -->
+        <section class="games-section" id="games">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        DUNIA GAME
+                    </span>
+
+                    <h2>
+                        Game Populer
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="game-categories">
+
+                <a href="#" class="game-category">
+                    <span>🎮</span>
+                    <strong>Mobile Legends</strong>
+                </a>
+
+                <a href="#" class="game-category">
+                    <span>🔫</span>
+                    <strong>PUBG Mobile</strong>
+                </a>
+
+                <a href="#" class="game-category">
+                    <span>🔥</span>
+                    <strong>Free Fire</strong>
+                </a>
+
+                <a href="#" class="game-category">
+                    <span>⚡</span>
+                    <strong>Valorant</strong>
+                </a>
+
+                <a href="#" class="game-category">
+                    <span>👑</span>
+                    <strong>Honor of Kings</strong>
+                </a>
+
+                <a href="#" class="game-category">
+                    <span>⚔️</span>
+                    <strong>Dota 2</strong>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+        <div class="footer-logo">
+            <span>GG</span>Nesia <small>NEWS</small>
+        </div>
+
+        <p>
+            GGNesia News — Portal berita seputar game dan esports.
+        </p>
+
+        <div class="footer-links">
+            <a href="#">Tentang Kami</a>
+            <a href="#">Kontak</a>
+            <a href="#">Kebijakan Privasi</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 GGNesia News. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+                  </html>
