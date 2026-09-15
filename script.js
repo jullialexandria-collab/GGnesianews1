@@ -87,3 +87,32 @@ searchBtn.addEventListener("click", function() {
     }
 
 });
+/* =========================
+   DATA BERITA
+========================= */
+
+let articles = [];
+
+async function loadArticles() {
+
+    try {
+
+        const response = await fetch("data/articles.json");
+
+        if (!response.ok) {
+            throw new Error("Gagal mengambil data berita.");
+        }
+
+        articles = await response.json();
+
+        console.log("Berita berhasil dimuat:", articles);
+
+    } catch (error) {
+
+        console.error("Error:", error);
+
+    }
+
+}
+
+loadArticles();
